@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 export class Counter {
   private static instance: Counter;
 
@@ -24,8 +26,22 @@ export class Counter {
     return Counter.instance;
   }
 
-  clickButton() {
+  clickButton(e : any) {//TODO: Find type of e
     this.gobflouz += 1;
+
+    //+1 animation
+    const appElement = document.querySelector('#app');
+    const plus1Element = document.createElement('span');
+    plus1Element.classList.add('appearingElement');
+    plus1Element.innerText = "+1";
+    plus1Element.style.left = e.clientX+'px';
+    plus1Element.style.top = e.clientY+'px';
+    appElement?.appendChild(plus1Element);
+
+    gsap.to(plus1Element, {y: -32, opacity: 0, duration: 1, onComplete: () => plus1Element.remove()})
+    //goes up
+    //keeps going up and opacity goes down to 0
+    //delete element
   }
 
   payProf(cout : number) {

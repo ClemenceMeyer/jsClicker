@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import { Counter } from "./counter";
 
 export class Prof {
@@ -10,6 +11,7 @@ export class Prof {
   owned: number = 0;
   counter: Counter;
 
+  buttonElement: HTMLButtonElement;
   actifsElement: HTMLElement;
 
   constructor(linkedDiv: HTMLElement, linkedData: Profile) {
@@ -25,6 +27,9 @@ export class Prof {
     this.actifsElement = this.linkedDiv.querySelector(
       ".prof-actifs"
     ) as HTMLElement;
+    this.buttonElement = this.linkedDiv.querySelector(
+        ".prof-button"
+      ) as HTMLButtonElement;
     this.initProfInHTML();
   }
 
@@ -49,10 +54,7 @@ export class Prof {
     ) as HTMLElement;
     apportElement.innerText = `Apport : ${this.apport}/s`;
 
-    const buttonElement = this.linkedDiv.querySelector(
-      ".prof-button"
-    ) as HTMLElement;
-    buttonElement.addEventListener("click", this.buy.bind(this));
+    this.buttonElement.addEventListener("click", this.buy.bind(this));
 
     this.actifsElement.innerText = `Profs actifs : ${this.owned}`;
 
@@ -63,9 +65,26 @@ export class Prof {
     if (this.counter.gobflouz >= this.cout) {
       this.addOneProf();
       this.counter.payProf(this.cout);
+      
       if (this.owned == 1) {
         this.initApport();
       }
+      
+      //animation
+      const tl = gsap.timeline({});
+      tl.to(this.buttonElement, {scale: 1.3, duration: 1, backgroundColor: '#16ad16', ease: "elastic"})
+      tl.to(this.buttonElement, {scale: 1, duration: 0.1, backgroundColor: 'rgb(239 239 239)'})
+      
+    } else {
+      //animation
+      const tl = gsap.timeline({});
+      tl.to(this.buttonElement, {scale: 1.3, rotation: 4, duration: 0.1, backgroundColor: '#ad1616', color: '#FFFFFF'})
+      tl.to(this.buttonElement, {rotation: -6, duration: 0.2})
+      tl.to(this.buttonElement, {rotation: 4, duration: 0.1})
+      tl.to(this.buttonElement, {rotation: -6, duration: 0.2})
+      tl.to(this.buttonElement, {rotation: 4, duration: 0.1})
+      tl.to(this.buttonElement, {rotation: -6, duration: 0.2})
+      tl.to(this.buttonElement, {scale: 1, rotation: 0, duration: 0.1, backgroundColor: 'rgb(239 239 239)', color: '#000000'})
     }
   }
 

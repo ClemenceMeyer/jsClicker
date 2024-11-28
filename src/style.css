@@ -92,13 +92,31 @@ h1 {
   padding: 6px;
   flex-shrink: 0;
 }
+.prof-nom{
+  font-weight: 700;
+}
 .prof-photo {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 2px;
 }
 
 .prof-button{
-  width: 100%;
+  display: block;
+  margin: auto;
+  width: 128px;
   height: 24px;
+  transform-origin: center;
+  border: none;
+  border-radius: 8px;
+}
+
+.appearingElement{
+  position: absolute;
+  font-size: 32px;
+  font-weight: 900;
+  color: rgb(30, 129, 10);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
