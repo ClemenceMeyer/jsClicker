@@ -120,3 +120,9 @@ h1 {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+.gobelin{
+  position: absolute;
+  width: 64px;
+  pointer-events: none;
+}

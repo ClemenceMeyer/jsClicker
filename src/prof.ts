@@ -70,11 +70,24 @@ export class Prof {
         this.initApport();
       }
       
-      //animation
-      const tl = gsap.timeline({});
-      tl.to(this.buttonElement, {scale: 1.3, duration: 1, backgroundColor: '#16ad16', ease: "elastic"})
-      tl.to(this.buttonElement, {scale: 1, duration: 0.1, backgroundColor: 'rgb(239 239 239)'})
-      
+      //animation button
+      const tlButton = gsap.timeline({});
+      tlButton.to(this.buttonElement, {scale: 1.3, duration: 1, backgroundColor: '#16ad16', ease: "elastic"})
+      tlButton.to(this.buttonElement, {scale: 1, duration: 0.1, backgroundColor: 'rgb(239 239 239)'})
+
+      //animation ajoute gobelin
+      const appElement = document.querySelector('#app');
+      const gobelinImg = document.createElement('img');
+      gobelinImg.classList.add('gobelin');
+      gobelinImg.src = '/goblinWalk.gif'
+      gobelinImg.style.left = '2vw';
+      gobelinImg.style.bottom = '0px';
+      appElement?.appendChild(gobelinImg);
+
+      const tlGob = gsap.timeline({repeat: -1});
+      tlGob.fromTo(gobelinImg, {scaleX: 1}, {scaleX: 1, x: "88vw", duration: 12, ease: "none"})
+      tlGob.fromTo(gobelinImg, {scaleX: -1}, {scaleX: -1, x: "2vw", duration: 12, ease: "none"})
+
     } else {
       //animation
       const tl = gsap.timeline({});
