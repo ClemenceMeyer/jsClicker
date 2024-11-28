@@ -1,0 +1,20 @@
+[
+    {
+      "photo" : "/photos/arnaud.png",
+      "name" : "Arnaud",
+      "cout" : 10,
+      "apport" : 1
+    },
+    {
+      "photo" : "/photos/vincent.png",
+      "name" : "Vincent",
+      "cout" : 100,
+      "apport" : 15
+    },
+    {
+      "photo" : "/photos/corinne.png",
+      "name" : "Corinne",
+      "cout" : 1000,
+      "apport" : 50
+    }
+  ]
