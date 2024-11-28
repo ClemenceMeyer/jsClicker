@@ -1,20 +1,38 @@
 [
-    {
-      "photo" : "/photos/arnaud.png",
-      "name" : "Arnaud",
-      "cout" : 10,
-      "apport" : 1
-    },
-    {
-      "photo" : "/photos/vincent.png",
-      "name" : "Vincent",
-      "cout" : 100,
-      "apport" : 15
-    },
-    {
-      "photo" : "/photos/corinne.png",
-      "name" : "Corinne",
-      "cout" : 1000,
-      "apport" : 50
-    }
-  ]
+  {
+    "photo": "/photos/arnaud.png",
+    "name": "Arnaud",
+    "cout": 1,
+    "apport": 1
+  },
+  {
+    "photo": "/photos/christian.png",
+    "name": "Christian",
+    "cout": 100,
+    "apport": 3
+  },
+  {
+    "photo": "/photos/vincent.png",
+    "name": "Vincent",
+    "cout": 1000,
+    "apport": 10
+  },
+  {
+    "photo": "/photos/mathieu.png",
+    "name": "Mathieu",
+    "cout": 10000,
+    "apport": 30
+  },
+  {
+    "photo": "/photos/xavier.png",
+    "name": "Xavier",
+    "cout": 100000,
+    "apport": 100
+  },
+  {
+    "photo": "/photos/corine.png",
+    "name": "Corine",
+    "cout": 1000000,
+    "apport": 10000
+  }
+]

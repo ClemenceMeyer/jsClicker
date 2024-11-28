@@ -4,35 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clicker Gobelins</title>
-    <style>
-      body{
-        margin-top: 64px;
-      }
-      #app{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-      }
-      #profs{
-        display: flex;
-        width: 90vw;
-        justify-content: space-around;
-        list-style-type: none;
-        padding: 0;
-      }
-      .prof{
-        background-color: blanchedalmond;
-        padding: 6px;
-      }
-    </style>
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
     <div id="app">
+      <div id="title">
+        <h1>Welcome to the Gobelins Clicker!</h1>
+        <span id="counter">You have 0 Gobflouz.</span>
+      </div>
       <button id="counter-button">
         Click to make Gobflouz!
       </button>
-      <span id="counter">You have 0 Gobflouz.</span>
       <ul id="profs">
         <li class="prof">
           <img class="prof-photo" src="" alt="">

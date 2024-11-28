@@ -47,7 +47,7 @@ export class Prof {
     const apportElement = this.linkedDiv.querySelector(
       ".prof-apport"
     ) as HTMLElement;
-    apportElement.innerText = `Apport : ${this.apport}/5s`;
+    apportElement.innerText = `Apport : ${this.apport}/s`;
 
     const buttonElement = this.linkedDiv.querySelector(
       ".prof-button"
@@ -73,7 +73,7 @@ export class Prof {
     this.profMakeMoney();
     setInterval(() => {
       this.profMakeMoney();
-    }, 5000);
+    }, 1000);
   }
 
   profMakeMoney() {
